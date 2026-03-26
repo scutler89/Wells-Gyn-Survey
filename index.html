@@ -859,7 +859,7 @@ textarea.xtall{min-height:175px}
       <p class="q-note">This helps us prioritize which patient profiles to build for first.</p>
       <div class="options-grid">
         <label class="check-label"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-text">Adolescent / young adult patients (ages 13–25)</span></label>
-        <label class="check-label"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-text">Reproductive-age patients (26–40)</span></label>
+        <label class="check-label"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-text">Patients of reproductive age</span></label>
         <label class="check-label"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-text">Perimenopause patients</span></label>
         <label class="check-label"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-text">Post-menopausal patients</span></label>
         <label class="check-label"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-text">Patients with endometriosis</span></label>
@@ -867,6 +867,7 @@ textarea.xtall{min-height:175px}
         <label class="check-label"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-text">Patients with chronic pelvic pain or vulvodynia</span></label>
         <label class="check-label"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-text">Fertility-seeking / preconception patients</span></label>
         <label class="check-label"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-text">Post-surgical / post-procedure recovery patients</span></label>
+        <label class="check-label"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-text">Patients managing weight gain, metabolic or hormonal changes</span></label>
         <label class="check-label"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-text">Patients with urogynecological concerns (incontinence, prolapse)</span></label>
       <div class="other-row"><div class="other-input-wrap"><input type="checkbox" onchange="toggleCheck(this)"><span class="other-label">Other priority group:</span><input type="text" class="other-text-input" placeholder=""></div></div>
       <div class="write-in-block"><span class="write-in-label">Which single patient type would you want us to build for first, and why?</span><textarea placeholder="Your thoughts…"></textarea></div>
@@ -889,14 +890,14 @@ textarea.xtall{min-height:175px}
 
     <!-- Q9 -->
     <div class="question" id="q9">
-      <div class="q-header"><div class="q-num">Q9</div><div class="q-text">How would you most want patients to access a curated product marketplace?</div></div>
-      <p class="q-note">Select your preferred model — or rank 1–4 if more than one appeals.</p>
+      <div class="q-header"><div class="q-num">Q9</div><div class="q-text">Which of the following access models would be attractive for your patients?</div></div>
+      <p class="q-note">Select all that apply.</p>
       <div class="options-grid single-col">
-        <label class="check-label"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-text">Digital marketplace — patients shop and order to their home themselves</span></label>
-        <label class="check-label"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-text">Practice-curated link — we share a custom URL pre-filtered for their condition</span></label>
-        <label class="check-label"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-text">On-site kiosk or display — products available for immediate take-home at the clinic</span></label>
-        <label class="check-label"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-text">Care team-initiated — nurse or coordinator places the order on the patient's behalf</span></label>
-        <label class="check-label"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-text">Combination — some products in-clinic; broader catalog available online</span></label>
+        <label class="check-label"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-text">Digital marketplace — patients are directed to a curated e-marketplace of practice-approved products and order directly to their home</span></label>
+        <label class="check-label"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-text">In-clinic digital selection — you browse a customizable marketplace with the patient on an iPad during the visit; products are ordered and delivered to their home</span></label>
+        <label class="check-label"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-text">Care team-initiated — a nurse or coordinator places the order on the patient's behalf (with their consent) through a digital marketplace, delivered to their home or the clinic for pickup</span></label>
+        <label class="check-label"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-text">On-site kiosk or display — select products available for immediate take-home at the clinic, with a broader curated marketplace available online</span></label>
+        <label class="check-label"><input type="checkbox" onchange="toggleCheck(this)"><span class="check-text">Combination — some in-clinic inventory where possible, with the broader catalog available online</span></label>
       </div>
       <div class="other-row"><div class="other-input-wrap"><input type="checkbox" onchange="toggleCheck(this)"><span class="other-label">Other:</span><input type="text" class="other-text-input" placeholder=""></div></div>
       <div class="write-in-block"><span class="write-in-label">What would make this most practical in your specific clinic context?</span><textarea placeholder="Your thoughts…"></textarea></div>
@@ -904,7 +905,8 @@ textarea.xtall{min-height:175px}
 
     <!-- Q10 -->
     <div class="question" id="q10">
-      <div class="q-header"><div class="q-num">Q10</div><div class="q-text">If products were available in your clinic, which format would work best?</div></div>
+      <div class="q-header"><div class="q-num">Q10</div><div class="q-text">If products were available through your clinic, which in-clinic format would work best?</div></div>
+      <p class="q-note">Keep in mind that most products would live in an online e-marketplace — the goal is for you to guide patients to the right products rather than leaving them to search Google, CVS, or Amazon. Only a subset of high-priority items would be physically stocked in-clinic.</p>
       <div class="options-grid single-col">
         <label class="check-label"><input type="radio" name="q10" onchange="toggleCheck(this)"><span class="check-text">Small curated take-home kits stocked at nursing stations or check-out</span></label>
         <label class="check-label"><input type="radio" name="q10" onchange="toggleCheck(this)"><span class="check-text">Branded display rack in the waiting area — patients self-select</span></label>
@@ -1101,11 +1103,11 @@ textarea.xtall{min-height:175px}
           </thead>
           <tbody id="likert-tbody">
             <tr>
-              <td><span class="stmt-text">My patients frequently ask what products can help during pregnancy or postpartum</span></td>
+              <td><span class="stmt-text">Patients ask about non-Rx products to manage their gynecologic condition</span></td>
               <td><input type="radio" name="likert0" value="1"></td><td><input type="radio" name="likert0" value="2"></td><td><input type="radio" name="likert0" value="3"></td><td><input type="radio" name="likert0" value="4"></td><td><input type="radio" name="likert0" value="5"></td><td><input type="radio" name="likert0" value="na"></td>
             </tr>
             <tr>
-              <td style="background:var(--sage-pale)"><span class="stmt-text">I feel confident in the product recommendations I currently give</span></td>
+              <td style="background:var(--sage-pale)"><span class="stmt-text">I feel confident in my current product recommendations</span></td>
               <td style="background:var(--sage-pale)"><input type="radio" name="likert1" value="1"></td><td style="background:var(--sage-pale)"><input type="radio" name="likert1" value="2"></td><td style="background:var(--sage-pale)"><input type="radio" name="likert1" value="3"></td><td style="background:var(--sage-pale)"><input type="radio" name="likert1" value="4"></td><td style="background:var(--sage-pale)"><input type="radio" name="likert1" value="5"></td><td style="background:var(--sage-pale)"><input type="radio" name="likert1" value="na"></td>
             </tr>
             <tr>
@@ -1113,19 +1115,19 @@ textarea.xtall{min-height:175px}
               <td><input type="radio" name="likert2" value="1"></td><td><input type="radio" name="likert2" value="2"></td><td><input type="radio" name="likert2" value="3"></td><td><input type="radio" name="likert2" value="4"></td><td><input type="radio" name="likert2" value="5"></td><td><input type="radio" name="likert2" value="na"></td>
             </tr>
             <tr>
-              <td style="background:var(--sage-pale)"><span class="stmt-text">A curated marketplace would change how I approach recommendations</span></td>
+              <td style="background:var(--sage-pale)"><span class="stmt-text">A validated marketplace would change what I recommend</span></td>
               <td style="background:var(--sage-pale)"><input type="radio" name="likert3" value="1"></td><td style="background:var(--sage-pale)"><input type="radio" name="likert3" value="2"></td><td style="background:var(--sage-pale)"><input type="radio" name="likert3" value="3"></td><td style="background:var(--sage-pale)"><input type="radio" name="likert3" value="4"></td><td style="background:var(--sage-pale)"><input type="radio" name="likert3" value="5"></td><td style="background:var(--sage-pale)"><input type="radio" name="likert3" value="na"></td>
             </tr>
             <tr>
-              <td><span class="stmt-text">I would refer patients to this marketplace if it existed</span></td>
+              <td><span class="stmt-text">I would refer gynecology patients to a clinically validated marketplace</span></td>
               <td><input type="radio" name="likert4" value="1"></td><td><input type="radio" name="likert4" value="2"></td><td><input type="radio" name="likert4" value="3"></td><td><input type="radio" name="likert4" value="4"></td><td><input type="radio" name="likert4" value="5"></td><td><input type="radio" name="likert4" value="na"></td>
             </tr>
             <tr>
-              <td style="background:var(--sage-pale)"><span class="stmt-text">I would consider formally partnering with or endorsing such a platform</span></td>
+              <td style="background:var(--sage-pale)"><span class="stmt-text">I would consider partnering with or endorsing this concept</span></td>
               <td style="background:var(--sage-pale)"><input type="radio" name="likert5" value="1"></td><td style="background:var(--sage-pale)"><input type="radio" name="likert5" value="2"></td><td style="background:var(--sage-pale)"><input type="radio" name="likert5" value="3"></td><td style="background:var(--sage-pale)"><input type="radio" name="likert5" value="4"></td><td style="background:var(--sage-pale)"><input type="radio" name="likert5" value="5"></td><td style="background:var(--sage-pale)"><input type="radio" name="likert5" value="na"></td>
             </tr>
             <tr>
-              <td><span class="stmt-text">My practice would be open to featuring this resource on-site or digitally</span></td>
+              <td><span class="stmt-text">My practice would be open to featuring this resource</span></td>
               <td><input type="radio" name="likert6" value="1"></td><td><input type="radio" name="likert6" value="2"></td><td><input type="radio" name="likert6" value="3"></td><td><input type="radio" name="likert6" value="4"></td><td><input type="radio" name="likert6" value="5"></td><td><input type="radio" name="likert6" value="na"></td>
             </tr>
           </tbody>
@@ -1489,9 +1491,8 @@ function collectFormData() {
   // ── Q6 rank selects
   const q6items = ['Treatment adherence / completion rates','Patient-reported quality of life',
     'Reduction in unplanned clinical visits for manageable symptoms','Patient satisfaction scores',
-    'Caregiver burden reduction','Emotional wellbeing and perinatal mental health',
-    'Recovery speed or functional restoration postpartum'];
-  const q6rows = document.querySelectorAll('#q6 .rank-row, .question#q6 .rank-row');
+    'Improved hormonal symptom management','Emotional wellbeing and mental health outcomes',
+    'Recovery speed or functional restoration post-procedure'];
   document.getElementById('q6')?.querySelectorAll('.rank-row').forEach((row, i) => {
     const sel = row.querySelector('.rank-select');
     data['Q6 | Rank | ' + (q6items[i] || 'Item '+(i+1))] = sel?.value || N;
@@ -1513,7 +1514,7 @@ function collectFormData() {
   });
 
   // ── Q8 checkboxes + textarea
-  const q8opts = ["Adolescent / young adult patients (ages 13–25)", "Reproductive-age patients (26–40)", "Perimenopause patients", "Post-menopausal patients", "Patients with endometriosis", "PCOS patients", "Patients with chronic pelvic pain or vulvodynia", "Fertility-seeking / preconception patients", "Post-surgical / post-procedure recovery patients", "Patients with urogynecological concerns (incontinence, prolapse)"];
+  const q8opts = ["Adolescent / young adult patients (ages 13–25)", "Patients of reproductive age", "Perimenopause patients", "Post-menopausal patients", "Patients with endometriosis", "PCOS patients", "Patients with chronic pelvic pain or vulvodynia", "Fertility-seeking / preconception patients", "Post-surgical / post-procedure recovery patients", "Patients managing weight gain, metabolic or hormonal changes", "Patients with urogynecological concerns (incontinence, prolapse)"];
   const q8 = document.getElementById('q8');
   q8opts.forEach((opt, i) => {
     const cbs = q8?.querySelectorAll('input[type="checkbox"]');
@@ -1523,11 +1524,11 @@ function collectFormData() {
   data['Q8 | Which single patient type to build for first'] = q8?.querySelector('textarea')?.value.trim() || N;
 
   // ── Q9 checkboxes + textarea
-  const q9opts = ['Digital marketplace — patients shop and order to their home themselves',
-    'Practice-curated link — we share a custom URL pre-filtered for their condition',
-    'On-site kiosk or display — products available for immediate take-home at the clinic',
-    "Care team-initiated — nurse or coordinator places the order on the patient's behalf",
-    'Combination — some products in-clinic; broader catalog available online'];
+  const q9opts = ['Digital marketplace — patients are directed to a curated e-marketplace of practice-approved products and order directly to their home',
+    'In-clinic digital selection — you browse a customizable marketplace with the patient on an iPad during the visit; products are ordered and delivered to their home',
+    "Care team-initiated — a nurse or coordinator places the order on the patient's behalf (with their consent) through a digital marketplace, delivered to their home or the clinic for pickup",
+    'On-site kiosk or display — select products available for immediate take-home at the clinic, with a broader curated marketplace available online',
+    'Combination — some in-clinic inventory where possible, with the broader catalog available online'];
   const q9 = document.getElementById('q9');
   q9opts.forEach((opt, i) => {
     const cbs = q9?.querySelectorAll('input[type="checkbox"]');
@@ -1577,7 +1578,7 @@ function collectFormData() {
 
   // ── Q13 checkboxes
   const q13opts = ['A named Clinical Advisory Board with visible specialist credentials',
-    'Formal endorsement from a recognizable specialty society (ACOG, ACNM, AWHONN)',
+    'Formal endorsement from a recognizable specialty society (ACOG, ISSVD, NAMS, ACNM)',
     "Your practice's own recommendation — 'Approved by your care team at [Clinic]'",
     'Peer patient reviews and testimonials from people with the same experience',
     'A combination of clinician endorsement and patient community validation'];
@@ -2025,8 +2026,8 @@ async function submitForm() {
       'Q7 | Other symptom 2 | Prevalence',
       'Q7 | Other symptom 2 | Good products exist',
       'Q7 | Other symptom 2 | Key issues',
-            'Q8 | Adolescent / young adult patients (ages 13–25)',
-      'Q8 | Patients of Reproductive Age',
+      'Q8 | Adolescent / young adult patients (ages 13–25)',
+      'Q8 | Patients of reproductive age',
       'Q8 | Perimenopause patients',
       'Q8 | Post-menopausal patients',
       'Q8 | Patients with endometriosis',
@@ -2038,11 +2039,11 @@ async function submitForm() {
       'Q8 | Patients with urogynecological concerns (incontinence, prolapse)',
       'Q8 | Other',
       'Q8 | Which single patient type to build for first',
-      'Q9 | Digital marketplace — patients shop and order to their home themselves',
-      'Q9 | Practice-curated link — we share a custom URL pre-filtered for their condition',
-      'Q9 | On-site kiosk or display — products available for immediate take-home at the clinic',
-      "Q9 | Care team-initiated — nurse or coordinator places the order on the patient's behalf",
-      'Q9 | Combination — some products in-clinic; broader catalog available online',
+      'Q9 | Digital marketplace — patients are directed to a curated e-marketplace of practice-approved products and order directly to their home',
+      'Q9 | In-clinic digital selection — you browse a customizable marketplace with the patient on an iPad during the visit; products are ordered and delivered to their home',
+      "Q9 | Care team-initiated — a nurse or coordinator places the order on the patient's behalf (with their consent) through a digital marketplace, delivered to their home or the clinic for pickup",
+      'Q9 | On-site kiosk or display — select products available for immediate take-home at the clinic, with a broader curated marketplace available online',
+      'Q9 | Combination — some in-clinic inventory where possible, with the broader catalog available online',
       'Q9 | Other',
       'Q9 | What would make this practical in your clinic',
       'Q10 | Small curated take-home kits stocked at nursing stations or check-out',
